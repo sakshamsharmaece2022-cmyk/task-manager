@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="header">
+      <h1>📋 Task Manager</h1>
+      <div>
+        <span id="welcome-msg"></span>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="add-task">
+      <h2>Add New Task</h2><br>
+      <input type="text" id="task-title" placeholder="Task title">
+      <input type="text" id="task-desc" placeholder="Description (optional)">
+      <select id="task-stage">
+        <option value="Todo">Todo</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Done">Done</option>
+      </select>
+      <button class="btn" onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="board">
+      <div class="column col-todo">
+        <h2>📝 Todo</h2>
+        <div id="todo-list"></div>
+      </div>
+      <div class="column col-progress">
+        <h2>⚙️ In Progress</h2>
+        <div id="progress-list"></div>
+      </div>
+      <div class="column col-done">
+        <h2>✅ Done</h2>
+        <div id="done-list"></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
